@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    color: black;
+    background: white;
+    clear: both;
+    height: 100%;
+    width: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-rendering: optimizeLegibility;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }

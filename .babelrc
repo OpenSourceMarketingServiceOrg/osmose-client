@@ -1,0 +1,22 @@
+{
+  "presets": [
+    ["env", { "modules": false }],
+    "stage-2", "es2015"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "add-filehash",
+    ["transform-imports", {
+      "vuetify": {
+          "transform": "vuetify/src/components/${member}"
+      }
+  }]
+],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env", "stage-2", "es2015"],
+      "plugins": [ "istanbul" ]
+    }
+  }
+}
