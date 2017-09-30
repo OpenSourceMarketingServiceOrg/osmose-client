@@ -1,14 +1,13 @@
 <template>
-   <v-toolbar class="info darken-3 white--text" dark>
-        <router-link class="navbar-brand white--text branding"  :to="{ name: 'home.index' }">
+   <v-toolbar class=" darken-3 white--text" >
+        <!-- <router-link class="navbar-brand white--text branding"  :to="{ name: 'home.index' }">
             {{title}}
-            <v-icon style="color:white; font-size: 1.2em;color:rgba(0,0,0,0.15);margin-bottom:5px;">email</v-icon>
-            <!-- <v-toolbar-title class="branding" v-text="title"></v-toolbar-title> -->
-        </router-link>
+            <v-icon style="color:white; font-size: 1.2em;color:#b3d4fc;margin-bottom:5px;">email</v-icon>
+        </router-link> -->
 
         <v-spacer></v-spacer>
 
-        <v-btn v-for="item in items" :key="item.title" :to="{ name: item.name }" style="background: transparent;">
+        <v-btn v-for="item in items" :key="item.title" :to="{ name: item.name }" class="white--text" style="background: transparent;">
             <v-icon style="padding-right:5px;">{{ item.icon }}</v-icon>
             {{ item.title }}
         </v-btn>
@@ -43,7 +42,7 @@
         clipped: false,
         fixed: false,
         miniVariant: false,
-        title: 'Easy Mail',
+        title: 'Osmose',
         items: [
             { title: '', icon: 'home', name: 'home.index' },
             { title: 'Admin', icon: 'account_circle', name: 'account.index',
@@ -76,7 +75,8 @@
 }
 
 nav.toolbar {
-    background: #4393B9;
+    // background: #4393B9;
+    background: #0067A8;
 }
 
 </style>

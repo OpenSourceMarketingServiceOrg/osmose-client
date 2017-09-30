@@ -31,3 +31,7 @@ import sidenav from '@/components/Sidenav';
     },
   };
 </script>
+
+<style lang="scss">
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
+</style>

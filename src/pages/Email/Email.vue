@@ -1,31 +1,15 @@
 <template>
-  <v-layout>
-    <v-card contextual-style="dark">
-      <span slot="header">
-        New Email
-      </span>
-      <div slot="body">
-        <div class="row pad-me">
-            <div class="col-md-6">
-                <label class="">Title</label>
-                <input class="form-control input-lg"></input>
-            </div>
-            <div class="col-md-6">
-                <label class="">Subject</label>
-                <input class="form-control input-lg"></input>
-            </div>
-            </div>
-            <div class="row pad-me">
-            <div class="col-md-12">
-                <textarea class="form-control input-lg" rows="3"></textarea>
-            </div>
-        </div>
-      </div>
-      <div slot="footer">
-        You're still here? Its over. Go email. 
-      </div>
-    </v-card>
-  </v-layout>
+  <v-container fluid grid-list-sm grid-list-md class="grey lighten-4">
+    <v-layout row wrap>
+      <v-flex xs12 md12 lg12>
+        <div class="display-1 rg-blue--text mb-3">New Email</div>
+      </v-flex>
+      <v-flex xs12 md12 lg12>
+        <vue-editor v-model="content"></vue-editor>
+        <v-btn primary @click="saveContent()">Save</v-btn>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <style lang="scss" scoped>
@@ -43,14 +27,31 @@
 
 <script>
 
-  import VLayout from '@/layouts/Default';
-  import VCard from '@/components/Card';
+  import { VueEditor } from 'vue2-editor';
 
-  export default {
-    name: 'email-index',
-    components: {
-      VLayout,
-      VCard,
-    },
-  };
+ export default {
+ 
+   components: {
+      VueEditor
+   },
+ 
+   data() {
+       return {
+         content: '<h1>Some initial content</h1>'  
+       }
+     },
+
+  methods: {
+      saveContent: function() {
+        // You have the content to save 
+        console.log(this.content);
+        this.$http.post('https://08hxnfcfu7.execute-api.us-east-1.amazonaws.com/dev/list', this.content).then(function(data) {
+          console.log(data);
+            transition.next();
+        }).catch(function (err) {
+            console.log(err);
+        });
+      }
+    }  
+   }
 </script>
