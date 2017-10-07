@@ -49,7 +49,7 @@ export default [
   {
     path: '/documentation',
     name: 'docs.index',
-    component: () => import('@/pages/Docs/docs'),
+    component: () => import('@/pages/Docs/Docs'),
     meta: {
       auth: true,
     },
