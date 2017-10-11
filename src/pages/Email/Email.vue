@@ -45,7 +45,7 @@
       saveContent: function() {
         // You have the content to save 
         console.log(this.content);
-        this.$http.post('https://08hxnfcfu7.execute-api.us-east-1.amazonaws.com/dev/list', this.content).then(function(data) {
+        this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', this.content).then(function(data) {
           console.log(data);
             transition.next();
         }).catch(function (err) {
