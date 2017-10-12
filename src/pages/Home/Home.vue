@@ -51,7 +51,7 @@
       items: [
         { title: 'Documentation', icon: 'library_books', route: 'docs.index', flex: 4 },
         { title: 'Demos', icon: 'stars', route: 'demos.index', flex: 4},
-        { title: 'Github', icon: 'fa fa-github', link: 'https://github.com', flex: 4},
+        { title: 'Github', icon: 'fa fa-github', link: 'https://github.com/OpenSourceMarketingServiceOrg', flex: 4},
       ]
     }},
 

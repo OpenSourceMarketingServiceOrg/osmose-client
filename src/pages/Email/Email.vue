@@ -42,15 +42,17 @@
      },
 
   methods: {
-      saveContent: function() {
+      saveContent() {
         // You have the content to save 
-        console.log(this.content);
-        this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', this.content).then(function(data) {
-          console.log(data);
-            transition.next();
-        }).catch(function (err) {
-            console.log(err);
-        });
+        // console.log(this.content);
+        let toSave = {email: 'qtlaw5@gmail.com', fname:"Quinn", lname:"L"};
+        this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', toSave)
+          .then((res) => {
+            console.log(res);
+              // transition.next();
+          }).catch((err) => {
+              console.log(err);
+          });
       }
     }  
    }
