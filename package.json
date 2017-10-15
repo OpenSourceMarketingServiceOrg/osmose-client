@@ -2,6 +2,29 @@
   "name": "osmose-client",
   "version": "0.0.0",
   "description": "Simply easy marketing email.",
+  "author": "OpenSourceMarketingService <OpenSourceMarketingService@gmail.com>",
+  "contributors": [
+    {
+      "name": "Dan Brown",
+      "email": "danjenator@gmail.com",
+      "url": "https://github.com/Danjenator"
+    },
+    {
+      "name": "Quinn Lawrence",
+      "email": "qtlawrence@outlook",
+      "url": "https://github.com/qtlawrence"
+    },
+    {
+      "name": "Michael Hopkins",
+      "email": "",
+      "url": "https://github.com/hopkinsma"
+    },
+    {
+      "name": "Zach Biri",
+      "email": "",
+      "url": "https://github.com/zabiri"
+    }
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -110,7 +133,7 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": "8.6.0",
+    "node": "8.7.0",
     "npm": "5.3"
   },
   "browserslist": [
