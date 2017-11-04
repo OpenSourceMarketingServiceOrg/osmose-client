@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar teal lighten-2">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/#/" class="waves-effect waves-light"><i class="material-icons">home</i></a></li>
