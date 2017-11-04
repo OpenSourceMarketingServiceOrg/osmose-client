@@ -1,5 +1,5 @@
 <template>
-<div class="container grey lighten-4">
+  <div class="container grey lighten-4">
     <div class="row">
       <div class="col s12">
         <h3 style="primary-color-dark">New Subscriber</h3>
@@ -30,27 +30,27 @@
         </form>
       </div>
       <div class="row">
-      <div class="col s12">
-        <h3>Subscriber List</h3>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th></th>
-            </tr>
-            </thead>
-            <tbody>
-              <tr v-for="sub in emailList" :key="sub.index">
-                <td>{{sub.fname}}</td>
-                <td>{{sub.lname}}</td>
-                <td>{{sub.email}}</td>
-                <td><a danger @click="deleteSub(sub)"><span style="color:red;" class="fa fa-trash fa-2x"></span></a></td>
+        <div class="col s12">
+          <h3>Subscriber List</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th></th>
               </tr>
-          </tbody>
-        </table>
-      </div>
+              </thead>
+              <tbody>
+                <tr v-for="sub in emailList" :key="sub.index">
+                  <td>{{sub.fname}}</td>
+                  <td>{{sub.lname}}</td>
+                  <td>{{sub.email}}</td>
+                  <td><a danger @click="deleteSub(sub)"><span style="color:red;" class="fa fa-trash fa-2x"></span></a></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

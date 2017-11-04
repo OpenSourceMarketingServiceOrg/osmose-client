@@ -1,12 +1,21 @@
 <template>
   <div id="app">
+    <sidenav></sidenav>
+    <navbar></navbar>
     <router-view/>
   </div>
 </template>
 
 <script>
+  import navbar from '@/components/Navbar';
+  import sidenav from '@/components/Sidenav';
+  
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      navbar,
+      sidenav
+    }
   };
 </script>
 
@@ -17,6 +26,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin-top: 0px;
   }
 </style>
