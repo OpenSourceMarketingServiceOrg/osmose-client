@@ -23,5 +23,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import "../assets/style/settings.scss";
+nav {
+  background-color: rgba($bg2R, $bg2G, $bg2B, 0.6);
+  font-family: Eczar;
+}
 
 </style>

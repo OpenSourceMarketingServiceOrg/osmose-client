@@ -60,6 +60,10 @@
   .table th, .table td {
     vertical-align: middle;
   }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
 </style>
 
 <script>

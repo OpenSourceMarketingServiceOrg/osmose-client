@@ -1,16 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Eczar:400,600,900|Work+Sans:400,600,900|Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
+//darker background r g and b vals
+$bg2R: 22;
+$bg2G: 27;
+$bg2B: 51;
+//header r g and bs
+$hr: 241;
+$hg: 218;
+$hb: 196;
+//paragraph r g and b
+$bodR: 166;
+$bodG: 156;
+$bodB: 172;
+
 
 html {
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    font-family: 'Work Sans';
   }
 
   body {
-    color: black;
-    background: #f5f5f5;
+    color: #a69cac;
+    background: #493548;
     clear: both;
     height: 100%;
     width: 100%;
@@ -31,3 +44,4 @@ html {
   header, main, footer {
     padding-left: 300px;
   }
+   

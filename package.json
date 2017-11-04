@@ -4,7 +4,7 @@
   "description": "Simply easy marketing email.",
   "author": "OpenSourceMarketingService <OpenSourceMarketingService@gmail.com>",
   "contributors": [
-    { 
+    {
       "name": "Dan Brown",
       "email": "danjenator@gmail.com",
       "url": "https://github.com/Danjenator"
@@ -122,6 +122,11 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
+  },
+  "resolve": {
+    "alias": {
+      "styles": "src/assets/style"
+    }
   },
   "browserslist": [
     "> 1%",

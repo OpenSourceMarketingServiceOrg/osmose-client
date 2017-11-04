@@ -19,5 +19,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-    
+    .zstyles {
+      background-color: #161b33;
+      color: #a69cac;
+      font-family: 'Work Sans';
+      h1 {
+        font-family: Eczar;
+        color: #f1dac4;
+      }
+      
+    }
 </style>
