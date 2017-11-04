@@ -1,5 +1,10 @@
 <template>
     <ul id="slide-out" class="side-nav fixed">
+      <li class="logo">
+        <a id="logo-container" href="/" >
+          <img class="responsive-img brand-logo" src="../assets/logo.png" />
+        </a>
+      </li>
       <li><a href="#!">First Sidebar Link</a></li>
       <li><a href="#!">Second Sidebar Link</a></li>
     </ul>
@@ -19,8 +24,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+  #logo-container {
+    height:100%;
+    border-bottom: 1px solid #ccc;
+  }
+
   .side-nav {
-    background: green;
+    background: #f5f5f5;
+  }
+
+  .brand-logo {
+    max-height: 100px;
+    vertical-align: middle;
   }
 
   header, main, footer {
