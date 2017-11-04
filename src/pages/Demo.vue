@@ -1,7 +1,7 @@
 <template>
   <div class="row grey lighten-4">
     <div class="col s12">
-      <h3 style="primary-color-dark">New Subscriber</h3>
+      <h3 style="primary-color-dark" class="h-serif">New Subscriber</h3>
     </div>
     <div class="row">
       <form @submit.prevent="save(subscriber)" class="col s12">
@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="form-group">
-          <a class="waves-effect waves-light btn">
+          <a class="waves-effect waves-light btn os-btn">
             Save
           </a>
         </div>
@@ -30,7 +30,7 @@
     </div>
     <div class="row">
       <div class="col s12">
-        <h3>Subscriber List</h3>
+        <h3 class="h-serif">Subscriber List</h3>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -55,6 +55,7 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/style/settings.scss";
   .table th, .table td {
     vertical-align: middle;
   }

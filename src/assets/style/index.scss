@@ -12,7 +12,7 @@ html {
   body {
     font-family: $p-font;    
     color: #a69cac;
-    background: #493548;
+    background: rgba($bg2R, $bg2G, $bg2B, 0.6);
     clear: both;
     height: 100%;
     width: 100%;
@@ -22,9 +22,7 @@ html {
     -moz-osx-font-smoothing: grayscale; 
     text-rendering: optimizeLegibility;
   }
-  h1, h2, h3, h4 {
-    font-family: $h-font;
-  }
+
   
   html, body {
     margin: 0;

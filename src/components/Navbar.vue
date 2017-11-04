@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar teal lighten-1">
+  <nav class="navbar">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li v-bind:class="{ active: $route.name === 'Home' }"><a href="/#/" class="waves-effect waves-light"><i class="material-icons">home</i></a></li>
@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style/settings.scss";
 nav {
-  background-color: rgba($bg2R, $bg2G, $bg2B, 0.6);
+  background-color: rgba($hr, $hg, $hb, 0.8);
   font-family: $h-font;
 }
 

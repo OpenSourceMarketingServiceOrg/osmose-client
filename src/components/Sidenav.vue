@@ -29,9 +29,9 @@
 </svg>
         </a>
       </li>
-      <li v-bind:class="{ active: $route.name === 'Docs-About' }"><a class="waves-effect waves-teal" href="/#/docs/about" >About</a></li>
-      <li v-bind:class="{ active: $route.name === 'Docs-GettingStarted' }"><a class="waves-effect waves-teal" href="/#/docs/getting-started">Getting Started</a></li>
-      <li v-bind:class="{ active: $route.name === 'Docs-Tools' }"><a class="waves-effect waves-teal" href="/#/docs/tools">Tools</a></li>
+      <li v-bind:class="{ active: $route.name === 'Docs-About' }"><a class="waves-effect waves-teal h-serif" href="/#/docs/about" >About</a></li>
+      <li v-bind:class="{ active: $route.name === 'Docs-GettingStarted' }"><a class="waves-effect waves-teal h-serif" href="/#/docs/getting-started">Getting Started</a></li>
+      <li v-bind:class="{ active: $route.name === 'Docs-Tools' }"><a class="waves-effect waves-teal h-serif" href="/#/docs/tools">Tools</a></li>
     </ul>
 </template>
 
@@ -58,12 +58,11 @@ export default {
   }
 
   .side-nav {
-    background: rgba($bg2R, $bg2G, $bg2B, 0.9);
+    background: rgba($bg2R, $bg2G, $bg2B, 1);
+    border-right: 1px solid #ccc;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     li>a {
-      font-family: $h-font;
-      color: rgb(255, 255, 255);
       font-size: 1.3rem;
     }
   }
@@ -82,26 +81,23 @@ export default {
         padding-left: 0;
       }
     }
+    .active {
+
+    }
     
-
-
   .cls-1 {
       fill: none;
   }
-
   .cls-2 {
       fill: rgba($hr, $hg, $hb, 1.0);
   }
-
   .cls-3 {
-      fill: rgba($hr, $hg, $hb, 0.05);
+      fill: rgba($hr, $hg, $hb, 0.25);
   }
-
   .cls-4 {
-      fill: rgba($hr, $hg, $hb, 0.4);
+      fill: rgba($hr, $hg, $hb, 0.5);
   }
-
   .cls-5 {
-      fill: rgba($hr, $hg, $hb, 0.8);
+      fill: rgba($hr, $hg, $hb, 0.75);
   }
 </style>
