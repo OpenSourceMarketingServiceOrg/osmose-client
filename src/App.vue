@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <sidenav></sidenav>
-    <navbar></navbar>
-    <router-view/>
+
+    <header>
+      <navbar></navbar>
+    </header>
+    
+    <main>
+      <router-view/>
+    </main>
   </div>
 </template>
 

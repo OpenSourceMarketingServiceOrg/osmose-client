@@ -1,14 +1,10 @@
 <template>
   <nav class="navbar">
-        
-    
     <div class="nav-wrapper">
-      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-        <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
+        <li><a href="/#/" class="waves-effect waves-light"><i class="material-icons">home</i></a></li>
+        <li><a href="/#/zstyle" class="waves-effect waves-light">Z-StyleZ</a></li>
+        <li><a href="/#/demo" class="waves-effect waves-light">Demos</a></li>
       </ul>
     </div>
   </nav>

@@ -46,7 +46,7 @@
                   <td>{{sub.fname}}</td>
                   <td>{{sub.lname}}</td>
                   <td>{{sub.email}}</td>
-                  <td><a danger @click="deleteSub(sub)"><span style="color:red;" class="fa fa-trash fa-2x"></span></a></td>
+                  <td><a danger @click="deleteSub(sub)"><span style="color:red;" class="fa fa-trash"></span></a></td>
                 </tr>
             </tbody>
           </table>
