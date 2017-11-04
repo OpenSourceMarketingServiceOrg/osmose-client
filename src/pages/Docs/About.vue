@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h3>About OZMoSE</h3>
+    <h3 class="h-serif">About OZMoSE</h3>
   </div>
 </template>
 

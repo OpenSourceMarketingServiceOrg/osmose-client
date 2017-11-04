@@ -1,6 +1,6 @@
 <template>
   <div class="getting-started">
-    <h3>Getting Started</h3>
+    <h3 class="h-serif">Getting Started</h3>
   </div>
 </template>
 

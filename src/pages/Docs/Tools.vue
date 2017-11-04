@@ -1,6 +1,6 @@
 <template>
   <div class="tools">
-    <h3>Tools</h3>
+    <h3 class="h-serif">Tools</h3>
   </div>
 </template>
 
