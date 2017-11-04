@@ -1,19 +1,19 @@
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
-import './plugins/vuex';
-import './plugins/axios';
-import { router } from './plugins/vue-router';
-import './plugins/vendor';
 import App from './App';
-import store from './store';
+import router from './router';
+import './plugins/vendor';
+
+import VueResource from 'vue-resource';
+Vue.use(VueResource);
 
 Vue.config.productionTip = false;
-store.dispatch('auth/check');
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app', // Bind the Vue instance to the HTML.
-  router,     // The router
-  store,      // The Vuex store.
-  /** @param {Function} h Will render the application. */
-  render: h => h(App), // h Will create an element.
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
 });
