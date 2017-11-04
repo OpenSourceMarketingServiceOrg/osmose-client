@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'Zstyles',
+  name: 'Zstyle',
   data () {
     return {
       msg: ''
@@ -19,13 +19,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import "../assets/style/settings.scss";
+
     .zstyles {
       background-color: #161b33;
       color: #a69cac;
       font-family: 'Work Sans';
       h1 {
         font-family: Eczar;
-        color: #f1dac4;
+        color: rgba($hr, $hg, $hb, 1);
       }
       
     }

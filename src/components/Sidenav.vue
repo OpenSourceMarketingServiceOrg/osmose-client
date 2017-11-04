@@ -29,8 +29,9 @@
 </svg>
         </a>
       </li>
-      <li><a href="#!">First Sidebar Link</a></li>
-      <li><a href="#!">Second Sidebar Link</a></li>
+      <li v-bind:class="{ active: $route.name === 'Docs-About' }"><a class="waves-effect waves-teal" href="/#/docs/about" >About</a></li>
+      <li v-bind:class="{ active: $route.name === 'Docs-GettingStarted' }"><a class="waves-effect waves-teal" href="/#/docs/getting-started">Getting Started</a></li>
+      <li v-bind:class="{ active: $route.name === 'Docs-Tools' }"><a class="waves-effect waves-teal" href="/#/docs/tools">Tools</a></li>
     </ul>
 </template>
 
@@ -39,7 +40,7 @@ export default {
   name: 'sidenav',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: ''
     };
   }
 };

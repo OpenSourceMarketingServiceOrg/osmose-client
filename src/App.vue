@@ -5,8 +5,8 @@
     <header>
       <navbar></navbar>
     </header>
-    
-    <main>
+
+    <main class="container-fluid">
       <router-view/>
     </main>
   </div>
@@ -26,17 +26,9 @@
 </script>
 
 <style lang="scss">
-$bg2R: 22;
-$bg2G: 27;
-$bg2B: 51;
-//non-paragraph r g and bs
-$hr: 241;
-$hg: 218;
-$hb: 196;
-//paragraph r g and b
-$bodR: 166;
-$bodG: 156;
-$bodB: 172;
+
+  @import './assets/style/index';
+  
   #app {
     font-family: Work Sans;
     -webkit-font-smoothing: antialiased;
@@ -44,5 +36,9 @@ $bodB: 172;
     text-align: center;
     color: rgb($bodR, $bodG, $bodB);
     margin-top: 0px;
+  }
+
+  main {
+    padding-top: 5px;
   }
 </style>
