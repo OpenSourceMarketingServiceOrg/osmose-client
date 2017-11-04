@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Eczar:400,600,900|Work+Sans:400,600,900|Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
-
+@import "./settings.scss";
 
 
 html {
@@ -7,10 +7,10 @@ html {
     overflow-x: hidden;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    font-family: 'Work Sans';
   }
 
   body {
+    font-family: $p-font;    
     color: #a69cac;
     background: #493548;
     clear: both;
@@ -21,6 +21,9 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: $h-font;
   }
   
   html, body {
@@ -33,4 +36,3 @@ html {
   header, main, footer {
     padding-left: 300px;
   }
-@import "./settings";

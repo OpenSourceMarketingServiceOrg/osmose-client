@@ -22,11 +22,11 @@ export default {
 @import "../assets/style/settings.scss";
 
     .zstyles {
-      background-color: #161b33;
+      background-color: rgba($bg2R, $bg2G, $bg2B, 1);
       color: #a69cac;
-      font-family: 'Work Sans';
+      font-family: $p-font;
       h1 {
-        font-family: Eczar;
+        font-family: $h-font;
         color: rgba($hr, $hg, $hb, 1);
       }
       

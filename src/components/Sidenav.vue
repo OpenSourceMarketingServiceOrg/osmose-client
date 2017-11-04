@@ -62,7 +62,7 @@ export default {
     -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
     li>a {
-      font-family: Eczar;
+      font-family: $h-font;
       color: rgb(255, 255, 255);
       font-size: 1.3rem;
     }
@@ -94,7 +94,7 @@ export default {
   }
 
   .cls-3 {
-      fill: rgba($hr, $hg, $hb, 0.1);
+      fill: rgba($hr, $hg, $hb, 0.05);
   }
 
   .cls-4 {

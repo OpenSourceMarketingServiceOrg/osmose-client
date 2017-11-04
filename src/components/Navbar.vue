@@ -26,7 +26,7 @@ export default {
 @import "../assets/style/settings.scss";
 nav {
   background-color: rgba($bg2R, $bg2G, $bg2B, 0.6);
-  font-family: Eczar;
+  font-family: $h-font;
 }
 
 </style>
