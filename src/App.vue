@@ -26,6 +26,7 @@
 </script>
 
 <style lang="scss">
+  @import './assets/style/index';
   
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
