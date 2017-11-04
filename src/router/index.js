@@ -7,12 +7,17 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: () => import('@/components/Home')
+      component: () => import('@/pages/Home')
     },
     {
       path: '/demo',
       name: 'Demo',
-      component: () => import('@/components/Demo')
+      component: () => import('@/pages/Demo')
+    },
+    {
+      path: '/zstyle',
+      name: 'Zstyles',
+      component: () => import('@/pages/Zstyle')
     }
   ]
 });
