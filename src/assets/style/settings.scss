@@ -1,0 +1,38 @@
+//darker background r g and b vals
+$bg2R: 219;
+$bg2G: 218;
+$bg2B: 234;
+//header r g and bs
+$hr: 73;
+$hg: 53;
+$hb: 72;
+
+// //header r g and bs
+// $hr: 241;
+// $hg: 218;
+// $hb: 196;
+
+//paragraph r g and b
+$bodR: 166;
+$bodG: 156;
+$bodB: 172;
+
+
+$p-font : 'Work Sans';
+$h-font : 'Eczar';
+
+.h-serif {
+    font-family: $h-font;
+    color: rgb($hr, $hg, $hb);
+}
+
+.p-sans {
+    font-family: $p-font;
+    color: rgba($hr, $hg, $hb, 0.8);
+}
+
+.os-btn {
+    background-color: rgba($hr, $hg, $hb, 0.7);
+    font-family: $h-font;
+    padding-top: 2px;
+}

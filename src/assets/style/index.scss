@@ -1,16 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Eczar:400,600,900|Work+Sans:400,600,900|Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
+@import "./settings.scss";
+
 
 html {
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
   }
 
   body {
-    color: black;
-    background: #f5f5f5;
+    font-family: $p-font;    
+    color: #a69cac;
+    background: rgba($bg2R, $bg2G, $bg2B, 0.6);
     clear: both;
     height: 100%;
     width: 100%;
@@ -20,6 +22,7 @@ html {
     -moz-osx-font-smoothing: grayscale; 
     text-rendering: optimizeLegibility;
   }
+
   
   html, body {
     margin: 0;

@@ -2,9 +2,9 @@
   <nav class="navbar">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/#/" class="waves-effect waves-light"><i class="material-icons">home</i></a></li>
-        <li><a href="/#/zstyle" class="waves-effect waves-light">Z-StyleZ</a></li>
-        <li><a href="/#/demo" class="waves-effect waves-light">Demos</a></li>
+        <li v-bind:class="{ active: $route.name === 'Home' }"><a href="/#/" class="waves-effect waves-light"><i class="material-icons">home</i></a></li>
+        <li v-bind:class="{ active: $route.name === 'Zstyle' }"><a href="/#/zstyle" class="waves-effect waves-light">Z-Style</a></li>
+        <li v-bind:class="{ active: $route.name === 'Demo' }"><a href="/#/demo" class="waves-effect waves-light">Demo</a></li>
       </ul>
     </div>
   </nav>
@@ -23,5 +23,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import "../assets/style/settings.scss";
+nav {
+  background-color: rgba($hr, $hg, $hb, 0.8);
+  font-family: $h-font;
+}
 
 </style>

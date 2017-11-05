@@ -5,8 +5,8 @@
     <header>
       <navbar></navbar>
     </header>
-    
-    <main>
+
+    <main class="container-fluid">
       <router-view/>
     </main>
   </div>
@@ -26,12 +26,19 @@
 </script>
 
 <style lang="scss">
+
+  @import './assets/style/index';
+  
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: Work Sans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: rgb($bodR, $bodG, $bodB);
     margin-top: 0px;
+  }
+
+  main {
+    padding-top: 5px;
   }
 </style>
