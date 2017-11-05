@@ -60,7 +60,7 @@
            subject: null,
            content: "<p>Hello,</p><p><br></p><p>This is an amazing email from OZMoSE!</p><p><br></p><p>Enjoy,</p><p>OSMoSe Team</p>"
            }
-       }
+       };
      },
 
   methods: {
@@ -80,5 +80,5 @@
           });
       }
     }  
-   }
+   };
 </script>
