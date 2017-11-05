@@ -34,13 +34,13 @@
      * The mixins that the component can use.
      */
     mixins: [
-      SlotMixin,
+      SlotMixin
     ],
     props: {
       contextualStyle: {
         type: String,
-        required: false,
-      },
+        required: false
+      }
     },
 
     /**
@@ -53,7 +53,7 @@
        *
        * @returns {Array} The classes for the header.
        */
-      classNamesHeader() {
+      classNamesHeader () {
         const classNames = ['card-header'];
 
         if (this.contextualStyle) {
@@ -64,8 +64,8 @@
         }
 
         return classNames;
-      },
-    },
+      }
+    }
   };
 </script>
 
