@@ -1,29 +1,42 @@
 <template>
-
+  <form action="#">
     <div class="client-grid row ">
       <div class="col s12">
         <h3 class="h-serif">Subscriber List</h3>
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th></th>
+              <th class="center">to:</th>
+              <th class="center">cc:</th>
+              <th class="center">bcc:</th>
+              <th class="center">First Name</th>
+              <th class="center">Last Name</th>
+              <th class="center">Email</th>
             </tr>
             </thead>
             <tbody>
-              <tr v-for="sub in emailList" :key="sub.index">
+              <tr v-for="sub in gridData" :key="sub.index">
+                <td class="center">
+                  <input type="checkbox" v-model="sub.to" class="filled-in" :id="'to'+sub.index"/>
+                  <label :for="'to'+sub.index"></label>
+                </td>
+                <td class="center">
+                  <input type="checkbox" v-model="sub.cc" class="filled-in" :id="'cc'+sub.index"/>
+                  <label :for="'cc'+sub.index"></label>
+                </td>
+                <td class="center">
+                  <input type="checkbox" v-model="sub.bcc" class="filled-in" :id="'bcc'+sub.index"/>
+                  <label :for="'bcc'+sub.index"></label>
+                </td>
                 <td>{{sub.fname}}</td>
                 <td>{{sub.lname}}</td>
                 <td>{{sub.email}}</td>
-                <td><a danger @click="deleteSub(sub)"><span style="color:red;" class="fa fa-trash"></span></a></td>
               </tr>
           </tbody>
         </table>
       </div>
     </div>
-
+  </form>
 </template>
 
 <script>
@@ -31,47 +44,7 @@
 
   export default {
     name: 'client-grid',
-    data () {
-      return {
-        emailList: [],
-        subscriber: {}
-      };
-    },
-    beforeMount () {
-      this.getIt();
-    },
-    methods: {
-      getIt () {
-        let self = this;
-        this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
-          .then((res) => {
-            console.log(res);
-            self.emailList = [];
-            res.data.emailList.forEach((e) => {
-              self.emailList.push({email: e.Email.S, fname: e.FirstName.S, lname: e.LastName.S, binary: e.EmailBinary.B, index: self.emailList.length});
-            });
-            console.log(self.emailList);
-          }).catch((err) => {
-            console.log(err);
-          });
-      },
-      save (sub) {
-        this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', sub)
-          .then((res) => {
-            console.log(res);
-          }).catch((err) => {
-            console.log(err);
-          });
-      },
-      deleteSub (sub) {
-        this.$http.delete('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', sub)
-          .then((res) => {
-            console.log(res);
-          }).catch((err) => {
-            console.log(err);
-          });
-      }
-    }
+    props: ['grid-data']
   };
 </script>
 
