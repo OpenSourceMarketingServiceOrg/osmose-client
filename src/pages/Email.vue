@@ -37,13 +37,14 @@
 </style>
 
 <script>
-
+import Materialize from 'materialize-css/dist/js/materialize.min.js';
 import { VueEditor } from 'vue2-editor';
 import ClientGrid from '@/components/ClientGrid';
 
 export default {
 
   components: {
+    Materialize,
     VueEditor,
     ClientGrid
   },
@@ -67,45 +68,47 @@ export default {
   },
   methods: {
     saveContent () {
-      // this.email.to.push(this.email.sendTo);
-
-      let self = this;
-
-      self.email.content = '<html><head></head><body>' + self.email.content + '</body></html>';
-      self.emailList.forEach((sub) => {
+      this.email.content = '<html><head></head><body>' + this.email.content + '</body></html>';
+      this.emailList.forEach((sub) => {
         if (sub.to) {
-          self.email.to.ToAddresses.push(sub.email);
-        } else if (sub.cc) {
-          self.email.to.CcAddresses.push(sub.email);
-        } else if (sub.bcc) {
-          self.email.to.BccAddresses.push(sub.email);
+          this.email.to.ToAddresses.push(sub.email);
+        }
+        if (sub.cc) {
+          this.email.to.CcAddresses.push(sub.email);
+        }
+        if (sub.bcc) {
+          this.email.to.BccAddresses.push(sub.email);
         }
       });
 
       this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/email', this.email)
         .then((res) => {
           console.log(res);
-          // transition.next();
+          Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">check</i><span>Email Successfully Sent!</span></div>`, 10000, 'green');
         }).catch((err) => {
           console.log(err);
+          Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">error</i><span>Error Sending Email</span></div>`, 10000, 'red');
         });
     },
-    getIt () {
-      let self = this;
+    getIt () { 
       this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
         .then((res) => {
           console.log(res);
-          self.emailList = [];
+          this.emailList = [];
           res.data.emailList.forEach((e) => {
-            self.emailList.push({
+            this.emailList.push({
               email: e.Email.S,
               fname: e.FirstName.S,
               lname: e.LastName.S,
               binary: e.EmailBinary.B,
-              index: self.emailList.length
+              index: this.emailList.length,
+              to: false,
+              cc: false,
+              bcc: false
             });
           });
-          console.log(self.emailList);
+          this.emailList = this.emailList.concat(this.emailList);
+          console.log(this.emailList);
         }).catch((err) => {
           console.log(err);
         });
