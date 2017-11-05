@@ -5,12 +5,12 @@ html {
     overflow-x: hidden;
     overflow-y: scroll; /* has to be scroll, not auto */
     -webkit-overflow-scrolling: touch;
-    font-family: 'Work Sans';
   }
 
   body {
+    font-family: $p-font;    
     color: #a69cac;
-    background: #493548;
+    background: rgba($bg2R, $bg2G, $bg2B, 0.6);
     clear: both;
     height: 100%;
     width: 100%;
@@ -20,6 +20,7 @@ html {
     -moz-osx-font-smoothing: grayscale; 
     text-rendering: optimizeLegibility;
   }
+
   
   html, body {
     margin: 0;
