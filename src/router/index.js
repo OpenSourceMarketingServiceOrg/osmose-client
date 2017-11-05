@@ -33,6 +33,11 @@ export default new Router({
       path: '/zstyle',
       name: 'Zstyle',
       component: () => import('@/pages/Zstyle')
+    },
+    {
+      path: '/email',
+      name: 'Email',
+      component: () => import('@/pages/Email')
     }
   ]
 });
