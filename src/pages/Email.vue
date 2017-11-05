@@ -19,7 +19,14 @@
     </div>
 </template>
 
-
+<!-- <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-addon">
+                <i class="fa fa-user fa-fw"></i>
+              </div>
+              <input v-model="email.sendTo" type="text" placeholder="Send To" class="form-control" />
+            </div>
+          </div> -->
 
 <style lang="scss" scoped>
 
@@ -36,58 +43,40 @@
 
 <script>
 
-  import { VueEditor } from 'vue2-editor';
-  import ClientGrid from '@/components/ClientGrid';
+import { VueEditor } from 'vue2-editor';
+import ClientGrid from '@/components/ClientGrid';
 
- export default {
+export default {
 
-   components: {
-      VueEditor,
-      ClientGrid
-   },
-
-   data() {
-       return {
-         email: {
-           to: [],
-           subject: null,
-           content: "<p>Hello,</p><p><br></p><p>This is an amazing email from OZMoSE!</p><p><br></p><p>Enjoy,</p><p>OSMoSe Team</p>"
-           }
-       };
-     },
-     beforeMount () {
-       this.getIt();
-     }
+  components: {
+    VueEditor,
+    ClientGrid
+  },
+  data() {
+    return {
+      email: {
+        to: [],
+        subject: null,
+        content: "<p>Hello,</p><p><br></p><p>This is an amazing email from OZMoSE!</p><p><br></p><p>Enjoy,</p><p>OSMoSe Team</p>"
+      }
+    };
+  },
   methods: {
-    getIt () {
-      let self = this;
-      this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
+    saveContent() {
+      // You have the content to save
+      console.log(this.email);
+      this.email.to.push(this.email.sendTo);
+      this.email.content = "<html><head></head><body>" + this.email.content + "</body></html>";
+      console.log(this.email);
+      // let email = {to: [this.email.sendTo], subject: this.email.subject, lname:"L"};
+      this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/email', this.email)
         .then((res) => {
           console.log(res);
-          self.emailList = [];
-          res.data.emailList.forEach((e) => {
-            self.emailList.push({email: e.Email.S, fname: e.FirstName.S, lname: e.LastName.S, binary: e.EmailBinary.B, index: self.emailList.length});
-          });
-          console.log(self.emailList);
+          // transition.next();
         }).catch((err) => {
           console.log(err);
         });
-    },
-      saveContent() {
-        // You have the content to save
-        console.log(this.email);
-        this.email.to.push(this.email.sendTo);
-        this.email.content = "<html><head></head><body>" + this.email.content + "</body></html>";
-        console.log(this.email);
-        // let email = {to: [this.email.sendTo], subject: this.email.subject, lname:"L"};
-        this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/email', this.email)
-          .then((res) => {
-            console.log(res);
-              // transition.next();
-          }).catch((err) => {
-              console.log(err);
-          });
-      }
     }
-   };
+  }
+};
 </script>

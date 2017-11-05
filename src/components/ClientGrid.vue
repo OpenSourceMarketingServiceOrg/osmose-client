@@ -76,13 +76,13 @@
             value: 'email',
             sortable: true
           },
-          { 
+          {
             text: 'First Name',
             align: 'left',
             value: 'fname',
             sortable: true
             },
-          { 
+          {
             text: 'Last Name',
             align: 'left',
             value: 'lname',
@@ -110,6 +110,23 @@
           },
         ]
       };
+    }
+    beforeMount () {
+      this.getIt();
+    },
+    methods : {
+      getIt() {
+        let self = this;
+        this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
+          .then((res) => {
+            self.emailList = [];
+            res.data.emailList.forEach((e) => {
+              self.emailList.push({email: e.Email.S, fname: e.FirstName.S, lname: e.LastName.S, binary: e.EmailBinary.B, index: self.emailList.length});
+            });
+          }).catch((err) => {
+            console.error(err);
+          });
+      }
     }
   };
 </script>
