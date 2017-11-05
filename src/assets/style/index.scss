@@ -9,7 +9,7 @@ html {
   }
 
   body {
-    font-family: $p-font;    
+    font-family: $p-font;
     color: #a69cac;
     background: rgba($bg2R, $bg2G, $bg2B, 0.6);
     clear: both;
@@ -18,11 +18,11 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  
+
   html, body {
     margin: 0;
     padding: 0;
@@ -33,4 +33,3 @@ html {
   header, main, footer {
     padding-left: 300px;
   }
-
