@@ -7,18 +7,20 @@
       <form @submit.prevent="save(subscriber)" class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
+            <i class="material-icons prefix">account_circle</i>
+            <input id="first_name" type="text" class="validate p-sans">
+            <label for="first_name" class="p-sans">First Name</label>
           </div>
           <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Last Name</label>
+            <input id="last_name" type="text" class="validate p-sans">
+            <label for="last_name" class="p-sans">Last Name</label>
           </div>
         </div>
         <div class="form-group">
           <div class="input-field col s12">
-            <input id="email" type="text" class="validate">
-            <label for="email">Email</label>
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" class="validate p-sans">
+            <label for="email" class="p-sans">Email</label>
           </div>
         </div>
         <div class="form-group">

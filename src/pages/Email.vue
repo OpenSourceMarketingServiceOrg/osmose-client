@@ -97,7 +97,13 @@ export default {
           console.log(res);
           self.emailList = [];
           res.data.emailList.forEach((e) => {
-            self.emailList.push({email: e.Email.S, fname: e.FirstName.S, lname: e.LastName.S, binary: e.EmailBinary.B, index: self.emailList.length});
+            self.emailList.push({
+              email: e.Email.S,
+              fname: e.FirstName.S,
+              lname: e.LastName.S,
+              binary: e.EmailBinary.B,
+              index: self.emailList.length
+            });
           });
           console.log(self.emailList);
         }).catch((err) => {
