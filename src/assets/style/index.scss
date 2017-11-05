@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Eczar:400,600,900|Work+Sans:400,600,900|Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
-@import "./settings.scss";
-
 
 html {
     height: 100%;
@@ -34,3 +32,5 @@ html {
   header, main, footer {
     padding-left: 300px;
   }
+
+@import "./settings";
