@@ -11,7 +11,7 @@ export default {
     /**
      * The methods that the mixin will add.
      */
-    methods: {
+  methods: {
       /**
        * Method used to check if a Vue component has a slot.
        *
@@ -19,8 +19,8 @@ export default {
        *
        * @returns {boolean} Whether the component has a slot.
        */
-      hasSlot(slotName = 'default') {
-        return !!this.$slots[slotName];
-      },
-    },
-  };
+    hasSlot (slotName = 'default') {
+      return !!this.$slots[slotName];
+    }
+  }
+};

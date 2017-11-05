@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import SlotMixin from './mixins/slot';
+  // import SlotMixin from './mixins/slot';
 
   export default {
     name: 'client-grid',
