@@ -1,40 +1,32 @@
 <template>
-    <div class="row ">
-      <div class="col s12">
-        <form @submit.prevent="saveContent(email)">
-          <client-grid :grid-data="emailList"></client-grid>
-          <div class="col s6">
-            <div class="input-field">
-              <input v-model="email.from" id="email_from" type="text" class="validate">
-              <label for="email_from">From</label>
-            </div>
-          </div>
-          <div class="col s12">
-            <div class="input-field ">
-              <input v-model="email.subject" id="email_subject" type="text" class="validate">
-              <label for="email_subject">Subject</label>
-            </div>
-          </div>
-          <div class="col s12">
-            <vue-editor v-model="email.content"></vue-editor>
-          </div>
-          <div class="col s12 pad-me">
-              <button class="btn btn-outline-success">
-                  <span class="fa fa-paper-plane" style="margin-right:5px;"></span> Send
-              </button>
-            </div>
-        </form>
+  <div class="row">
+    <form @submit.prevent="saveContent(email)">
+      <div class="page-break" style="margin-top:-5px;">
+        <client-grid :grid-data="emailList"></client-grid>
       </div>
-    </div>
+      <div class="col s12">
+        <div class="input-field">
+          <input v-model="email.from" id="email_from" type="text" class="validate">
+          <label for="email_from">From</label>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="input-field ">
+          <input v-model="email.subject" id="email_subject" type="text" class="validate">
+          <label for="email_subject">Subject</label>
+        </div>
+      </div>
+      <div class="col s12">
+        <vue-editor v-model="email.content"></vue-editor>
+      </div>
+      <div class="col s12 pad-me-vertical">
+          <button class="btn btn-outline-success">
+              <span class="fa fa-paper-plane" style="margin-right:5px;"></span> Send
+          </button>
+        </div>
+    </form>
+  </div>
 </template>
-
-<style lang="scss" scoped>
-
-  .pad-me {
-    margin: 10px auto 10px auto;
-  }
-
-</style>
 
 <script>
 import Materialize from 'materialize-css/dist/js/materialize.min.js';
@@ -116,3 +108,16 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+
+  .pad-me-vertical {
+    margin: 15px auto 15px auto;
+  }
+
+  #quill-container, .ql-toolbar.ql-snow, .quillWrapper {
+    background: #fcfcfc;
+    color: #474D57;
+  }
+
+</style>

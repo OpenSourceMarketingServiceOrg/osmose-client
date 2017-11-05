@@ -1,28 +1,28 @@
 <template>
   <form action="#">
     <div class="client-grid row ">
-      <div class="col s12">
+      <div class="col s12" style="">
         <h3 class="h-serif">Subscriber List</h3>
         <div class="toggleCtrlBar">
           <div class="toggleItem">
-            <a v-on:click="doToggleToAll()" class="btn btn-primary waves-effect waves-light"><i class="fa" v-bind:class="{ 'fa-square-o': !toToggled, 'fa-check-square-o': toToggled }"></i> To</a>
+            <a v-on:click="doToggleToAll()" class="btn btn-teal waves-effect waves-light"><i class="fa" v-bind:class="{ 'fa-square-o': !toToggled, 'fa-check-square-o': toToggled }"></i> To</a>
           </div>
           <div class="toggleItem">
-            <a v-on:click="doToggleCCAll()" class="btn btn-primary waves-effect waves-light"><i class="fa" v-bind:class="{ 'fa-square-o': !ccToggled, 'fa-check-square-o': ccToggled }"></i> CC</a>
+            <a v-on:click="doToggleCCAll()" class="btn btn-teal waves-effect waves-light"><i class="fa" v-bind:class="{ 'fa-square-o': !ccToggled, 'fa-check-square-o': ccToggled }"></i> CC</a>
           </div>
           <div class="toggleItem">
-            <a v-on:click="doToggleBCCAll()" class="btn btn-primary waves-effect waves-light"><i class="fa" v-bind:class="{ 'fa-square-o': !bccToggled, 'fa-check-square-o': bccToggled }"></i> BCC</a>
+            <a v-on:click="doToggleBCCAll()" class="btn btn-teal waves-effect waves-light"><i class="fa" v-bind:class="{ 'fa-square-o': !bccToggled, 'fa-check-square-o': bccToggled }"></i> BCC</a>
           </div>
         </div>
         <table class="table table-striped responsive-table">
           <thead>
             <tr>
               <th width="10%">to:</th>
-              <th width="10%" class="">cc:</th>
-              <th width="10%" class="">bcc:</th>
-              <th width="20%" class="">First Name</th>
-              <th width="20%" class="">Last Name</th>
-              <th width="20%" class="">Email</th>
+              <th width="10%">cc:</th>
+              <th width="10%">bcc:</th>
+              <th width="20%">First Name</th>
+              <th width="20%">Last Name</th>
+              <th width="20%">Email</th>
             </tr>
           </thead>
             <tbody>
@@ -100,7 +100,7 @@
         toToggled: false,
         ccToggled: false,
         bccToggled: false
-      }
+      };
     }
   };
 </script>
@@ -127,14 +127,12 @@
     max-width:980px;
     table-layout:fixed;
     margin:auto;
-    background:rgba(0,0,0,0.025);
   }
   th, td {
     padding:5px 10px;
   }
   thead, tfoot {
     border-bottom: 1px solid #9e9e9e;
-    background:rgba(0,0,0,0.025);
     display:table;
     width:100%;
     width:calc(100% - 18px);

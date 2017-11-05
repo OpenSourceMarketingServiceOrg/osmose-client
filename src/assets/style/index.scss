@@ -2,34 +2,32 @@
 @import "./settings.scss";
 
 html {
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll; /* has to be scroll, not auto */
-    -webkit-overflow-scrolling: touch;
-  }
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
 
-  body {
-    font-family: $p-font;
-    color: #a69cac;
-    background: rgba($bg2R, $bg2G, $bg2B, 0.6);
-    clear: both;
-    height: 100%;
-    width: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-  }
+body {
+  font-family: $p-font;
+  color: #a69cac;
+  background: rgba($bg2R, $bg2G, $bg2B, 0.6);
+  clear: both;
+  height: 100%;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-
-  /* This is for the sidenav. Will need to add @media */
-  header, main, footer {
-    padding-left: 300px;
-  }
+/* This is for the sidenav. Will need to add @media */
+header, main, footer {
+  padding-left: 300px;
+}

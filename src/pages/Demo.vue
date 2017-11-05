@@ -1,5 +1,5 @@
 <template>
-  <div class="row grey lighten-4">
+  <div class="row" style="margin-bottom: 0px;">
     <div class="col s12">
       <h3 style="primary-color-dark" class="h-serif">New Subscriber</h3>
     </div>
@@ -28,7 +28,7 @@
         </div>
       </form>
     </div>
-    <div class="row">
+    <div class="row page-break" >
       <div class="col s12">
         <h3 class="h-serif">Subscriber List</h3>
         <table class="table table-striped">
@@ -53,17 +53,6 @@
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-@import "../assets/style/settings.scss";
-  .table th, .table td {
-    vertical-align: middle;
-  }
-  .container .row {
-    margin-left: 0;
-    margin-right: 0;
-  }
-</style>
 
 <script>
   import Materialize from 'materialize-css/dist/js/materialize.min.js';
@@ -142,3 +131,17 @@
     }
   };
 </script>
+
+
+<style lang="scss" scoped>
+@import "../assets/style/settings.scss";
+
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  .container .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+</style>
