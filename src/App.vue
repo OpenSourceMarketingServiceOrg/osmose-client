@@ -26,7 +26,6 @@
 </script>
 
 <style lang="scss" scoped>
-
   @import './assets/style/index';
   
   #app {
