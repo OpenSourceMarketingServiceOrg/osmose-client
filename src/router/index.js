@@ -28,6 +28,11 @@ export default new Router({
       path: '/docs/tools',
       name: 'Docs-Tools',
       component: () => import('@/pages/Docs/Tools')
+    },
+    {
+      path: '/email',
+      name: 'Email',
+      component: () => import('@/pages/Email')
     }
   ]
 });

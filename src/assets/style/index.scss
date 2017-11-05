@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Eczar:400,600,900|Work+Sans:400,600,900|Open+Sans:300,400,600,900|Roboto:300,400,500,700,900|Fredoka+One:300,400,500,700,900|Material+Icons);
 @import "./settings.scss";
 
-
 html {
     height: 100%;
     overflow-x: hidden;
@@ -10,7 +9,7 @@ html {
   }
 
   body {
-    font-family: $p-font;    
+    font-family: $p-font;
     color: #a69cac;
     background: rgba($bg2R, $bg2G, $bg2B, 0.6);
     clear: both;
@@ -19,11 +18,11 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
-  
+
   html, body {
     margin: 0;
     padding: 0;
