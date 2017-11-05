@@ -4,10 +4,14 @@
         <form @submit.prevent="saveContent(email)">
           
         <client-grid></client-grid>
-        <div class="input-field col s12">
+        
+        <div class="col s12">
+          <div class="input-field ">
             <input v-model="email.subject" id="email_subject" type="text" class="validate">
             <label for="email_subject">Subject</label>
           </div>
+        </div>
+
         <vue-editor v-model="email.content"></vue-editor>
             <div class="col s12">
                 <button class="btn btn-outline-success">
