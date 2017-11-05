@@ -1,6 +1,6 @@
 <template>
 
-    <div class="client-grid row">
+    <div class="client-grid row ">
       <div class="col s12">
         <h3 class="h-serif">Subscriber List</h3>
         <table class="table table-striped">
@@ -23,7 +23,7 @@
         </table>
       </div>
     </div>
-    
+
 </template>
 
 <script>
@@ -76,7 +76,10 @@
 </script>
 
 <style lang='scss' scoped>
-.client-grid {
 
-}
+  table {
+    border: 1px solid #ccc;
+    color: #493548;
+  }
+
 </style>
