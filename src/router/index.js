@@ -28,11 +28,6 @@ export default new Router({
       path: '/docs/tools',
       name: 'Docs-Tools',
       component: () => import('@/pages/Docs/Tools')
-    },
-    {
-      path: '/zstyle',
-      name: 'Zstyle',
-      component: () => import('@/pages/Zstyle')
     }
   ]
 });

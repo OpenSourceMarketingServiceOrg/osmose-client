@@ -36,3 +36,32 @@ $h-font : 'Eczar';
     font-family: $h-font;
     padding-top: 2px;
 }
+
+.side- {
+    border-left: 5px solid black;
+}
+
+    .cls-1 {
+      fill: none;
+    }
+
+    .cls-2 {
+      fill: rgba($hr, $hg, $hb, 1.0);
+    }
+
+    .cls-3 {
+      fill: rgba($hr, $hg, $hb, 0.25);
+    }
+
+    .cls-4 {
+      fill: rgba($hr, $hg, $hb, 0.5);
+    }
+
+    .cls-5 {
+      fill: rgba($hr, $hg, $hb, 0.75);
+    }
+    .os-btn:hover {
+      background-color: rgba($hr, $hg, $hb, 0.5);
+      text-shadow: 1px 1px 10px black;
+    }
+

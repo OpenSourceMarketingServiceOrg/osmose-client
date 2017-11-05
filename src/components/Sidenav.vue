@@ -70,6 +70,8 @@ export default {
   .brand-logo {
     max-height: 100px;
     vertical-align: middle;
+        -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.5));
+    drop-shadow: (2px 1px 2px rgba(0, 0, 0, 0.5));
   }
 
   header, main, footer {
@@ -81,23 +83,7 @@ export default {
         padding-left: 0;
       }
     }
-    .active {
 
-    }
     
-  .cls-1 {
-      fill: none;
-  }
-  .cls-2 {
-      fill: rgba($hr, $hg, $hb, 1.0);
-  }
-  .cls-3 {
-      fill: rgba($hr, $hg, $hb, 0.25);
-  }
-  .cls-4 {
-      fill: rgba($hr, $hg, $hb, 0.5);
-  }
-  .cls-5 {
-      fill: rgba($hr, $hg, $hb, 0.75);
-  }
+
 </style>
