@@ -109,7 +109,7 @@
             lname: 'Bobbington'
           },
         ]
-      }
+      };
     }
   };
 </script>
