@@ -2,7 +2,7 @@
     <div class="row grey lighten-4">
       <div class="col s12">
         <form @submit.prevent="saveContent(email)">
-          
+
         <client-grid></client-grid>
         <div class="input-field col s12">
             <input v-model="email.subject" id="email_subject" type="text" class="validate">
@@ -19,14 +19,7 @@
     </div>
 </template>
 
-<!-- <div class="form-group">
-            <div class="input-group input-group-lg">
-              <div class="input-group-addon">
-                <i class="fa fa-user fa-fw"></i>
-              </div>
-              <input v-model="email.sendTo" type="text" placeholder="Send To" class="form-control" />
-            </div>
-          </div> -->
+
 
 <style lang="scss" scoped>
 
@@ -36,7 +29,7 @@
 //   label {
 //     font-weight:bold;
 //     margin-bottom:4px;
-//   }   
+//   }
 // }
 
 </style>
@@ -47,12 +40,12 @@
   import ClientGrid from '@/components/ClientGrid';
 
  export default {
- 
+
    components: {
       VueEditor,
       ClientGrid
    },
- 
+
    data() {
        return {
          email: {
@@ -62,10 +55,26 @@
            }
        };
      },
-
+     beforeMount () {
+       this.getIt();
+     }
   methods: {
+    getIt () {
+      let self = this;
+      this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
+        .then((res) => {
+          console.log(res);
+          self.emailList = [];
+          res.data.emailList.forEach((e) => {
+            self.emailList.push({email: e.Email.S, fname: e.FirstName.S, lname: e.LastName.S, binary: e.EmailBinary.B, index: self.emailList.length});
+          });
+          console.log(self.emailList);
+        }).catch((err) => {
+          console.log(err);
+        });
+    },
       saveContent() {
-        // You have the content to save 
+        // You have the content to save
         console.log(this.email);
         this.email.to.push(this.email.sendTo);
         this.email.content = "<html><head></head><body>" + this.email.content + "</body></html>";
@@ -79,6 +88,6 @@
               console.log(err);
           });
       }
-    }  
+    }
    };
 </script>
