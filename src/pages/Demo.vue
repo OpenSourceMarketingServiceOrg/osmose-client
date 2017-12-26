@@ -45,7 +45,7 @@
                 <td>{{sub.fname}}</td>
                 <td>{{sub.lname}}</td>
                 <td>{{sub.email}}</td>
-                <td><a danger @click="deleteSub(sub)"><span style="color:red;" class="fa fa-trash"></span></a></td>
+                <td><a danger @click="deleteSub(sub.email)"><span style="color:red;" class="fa fa-trash"></span></a></td>
               </tr>
           </tbody>
         </table>
@@ -116,10 +116,18 @@
             this.reset();
           });
       },
-      deleteSub (sub) {
-        this.$http.delete('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', sub)
+      deleteSub (emailToDelete) {
+        console.log('email to be deleted4: ', emailToDelete);
+        let deleteParams = {
+          params: {
+            emailToDelete: emailToDelete
+          }
+        };
+        console.log('deleteParams: ', deleteParams);
+        this.$http.delete('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', deleteParams)
           .then((res) => {
             console.log(res);
+            this.getIt();
           }).catch((err) => {
             console.log(err);
           });
