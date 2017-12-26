@@ -107,7 +107,6 @@ export default {
               bcc: false
             });
           });
-          this.emailList = this.emailList.concat(this.emailList);
           console.log(this.emailList);
         }).catch((err) => {
           console.log(err);
