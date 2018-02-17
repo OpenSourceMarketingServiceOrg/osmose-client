@@ -51,13 +51,13 @@ export default {
   data () {
     return {
       email: {
-        from: null,
+        from: 'testdownthere@osmose.tools',
         to: {
           BccAddresses: [],
           CcAddresses: [],
           ToAddresses: []
         },
-        subject: null,
+        subject: 'Deez Nutz Multi',
         content: '<p>Hello,</p><p><br></p><p>This is an amazing email from OSMoSE!</p><p><br></p><p>Enjoy,</p><p>OSMoSe Team</p>'
       },
       emailList: []
@@ -85,6 +85,20 @@ export default {
         .then((res) => {
           console.log(res);
           Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">check</i><span>Email Successfully Sent!</span></div>`, 10000, 'green');
+          this.emailList.forEach((sub) => {
+            if (sub.to) {
+              sub.to = [];
+            }
+            if (sub.cc) {
+              sub.cc = [];
+            }
+            if (sub.bcc) {
+              sub.bcc = [];
+            }
+          });
+          this.email.to.ToAddresses = [];
+          this.email.to.CcAddresses = [];
+          this.email.to.ToAddresses = [];
         }).catch((err) => {
           console.log(err);
           Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">error</i><span>Error Sending Email</span></div>`, 10000, 'red');
