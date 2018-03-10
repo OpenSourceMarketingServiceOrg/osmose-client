@@ -100,7 +100,7 @@
         toToggled: false,
         ccToggled: false,
         bccToggled: false
-      }
+      };
     }
   };
 </script>
