@@ -81,7 +81,7 @@ export default {
         }
       });
 
-      this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/email', this.email)
+      this.$http.post('https://zsazrlvshe.execute-api.us-east-1.amazonaws.com/dev1/email', this.email)
         .then((res) => {
           console.log(res);
           Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">check</i><span>Email Successfully Sent!</span></div>`, 10000, 'green');
@@ -105,7 +105,7 @@ export default {
         });
     },
     getIt () { 
-      this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
+      this.$http.get('https://zsazrlvshe.execute-api.us-east-1.amazonaws.com/dev1/list', {})
         .then((res) => {
           console.log(res);
           this.emailList = [];
