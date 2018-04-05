@@ -114,6 +114,7 @@ export default {
               email: e.Email.S,
               fname: e.FirstName.S,
               lname: e.LastName.S,
+              confirmed: e.Confirmed.BOOL,
               binary: e.EmailBinary.B,
               index: this.emailList.length,
               to: false,
