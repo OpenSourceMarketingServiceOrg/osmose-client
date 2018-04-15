@@ -105,8 +105,8 @@
   "homepage": "http://osmose.tools",
   "author": "OpenSourceMarketingService <OpenSourceMarketingService@gmail.com>",
   "contributors": [
-    "Dan Brown <danjenator@gmail.com> (https://github.com/Danjenator)",
     "Quinn Lawrence <qtlawrence@outlook.com> (https://github.com/qtlawrence)",
+    "Dan Brown <danjenator@gmail.com> (https://github.com/Danjenator)",
     "Zach Biri <zachbiri@gmail.com> (https://github.com/zabiri)"
   ],
   "engines": {
@@ -116,7 +116,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 9"
+    "not ie <= 10"
   ],
   "resolve": {
     "alias": {
