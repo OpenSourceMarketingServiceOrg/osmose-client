@@ -29,17 +29,16 @@
 </template>
 
 <style lang="scss" scoped>
-
   .pad-me {
     margin: 10px auto 10px auto;
   }
-
 </style>
 
 <script>
 import Materialize from 'materialize-css/dist/js/materialize.min.js';
 import { VueEditor } from 'vue2-editor';
 import ClientGrid from '@/components/ClientGrid';
+import config from '../../config/osmose';
 
 export default {
 
@@ -51,14 +50,14 @@ export default {
   data () {
     return {
       email: {
-        from: 'testdownthere@osmose.tools',
+        from: '',
         to: {
           BccAddresses: [],
           CcAddresses: [],
           ToAddresses: []
         },
-        subject: 'Deez Nutz Multi',
-        content: '<p>Hello,</p><p><br></p><p>This is an amazing email from OSMoSE!</p><p><br></p><p>Enjoy,</p><p>OSMoSe Team</p>'
+        subject: '',
+        content: ''
       },
       emailList: []
     };
@@ -81,9 +80,8 @@ export default {
         }
       });
 
-      this.$http.post('https://zsazrlvshe.execute-api.us-east-1.amazonaws.com/dev1/email', this.email)
+      this.$http.post(config.api.email, this.email)
         .then((res) => {
-          console.log(res);
           Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">check</i><span>Email Successfully Sent!</span></div>`, 10000, 'green');
           this.emailList.forEach((sub) => {
             if (sub.to) {
@@ -100,14 +98,13 @@ export default {
           this.email.to.CcAddresses = [];
           this.email.to.ToAddresses = [];
         }).catch((err) => {
-          console.log(err);
+          console.error(err);
           Materialize.toast(`<div class="toaster"><i class="material-icons" style="margin-right:8px;">error</i><span>Error Sending Email</span></div>`, 10000, 'red');
         });
     },
     getIt () { 
-      this.$http.get('https://zsazrlvshe.execute-api.us-east-1.amazonaws.com/dev1/list', {})
+      this.$http.get(config.api.list.get, {})
         .then((res) => {
-          console.log(res);
           this.emailList = [];
           res.data.emailList.forEach((e) => {
             this.emailList.push({
@@ -122,9 +119,8 @@ export default {
               bcc: false
             });
           });
-          console.log(this.emailList);
         }).catch((err) => {
-          console.log(err);
+          console.error(err);
         });
     }
   }
