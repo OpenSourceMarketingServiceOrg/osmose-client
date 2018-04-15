@@ -2,31 +2,7 @@
   "name": "osmose-client",
   "version": "0.0.0",
   "description": "Simply easy marketing email.",
-  "keywords": [
-    "Vue",
-    "email",
-    "marketing",
-    "osmose"
-  ],
   "license": "MIT",
-  "author": "OpenSourceMarketingService <OpenSourceMarketingService@gmail.com>",
-  "contributors": [
-    {
-      "name": "Dan Brown",
-      "email": "danjenator@gmail.com",
-      "url": "https://github.com/Danjenator"
-    },
-    {
-      "name": "Quinn Lawrence",
-      "email": "qtlawrence@outlook.com",
-      "url": "https://github.com/qtlawrence"
-    },
-    {
-      "name": "Zach Biri",
-      "email": "zachbiri@gmail.com",
-      "url": "https://github.com/zabiri"
-    }
-  ],
   "scripts": {
     "build": "node build/build.js",
     "clean": "npm run clean:n & npm run clean:b",
@@ -119,18 +95,38 @@
     "webpack-hot-middleware": "^2.22.0",
     "webpack-merge": "^4.1.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenSourceMarketingServiceOrg/osmose-client"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenSourceMarketingServiceOrg/osmose-client/issues"
+  },
+  "homepage": "http://osmose.tools",
+  "author": "OpenSourceMarketingService <OpenSourceMarketingService@gmail.com>",
+  "contributors": [
+    "Dan Brown <danjenator@gmail.com> (https://github.com/Danjenator)",
+    "Quinn Lawrence <qtlawrence@outlook.com> (https://github.com/qtlawrence)",
+    "Zach Biri <zachbiri@gmail.com> (https://github.com/zabiri)"
+  ],
   "engines": {
-    "node": "= 8.10.0",
-    "npm": "= 5.6.0"
+    "node": ">= 8.11.1",
+    "npm": ">= 5.6.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not ie <= 9"
   ],
   "resolve": {
     "alias": {
       "styles": "src/assets/style"
     }
-  }
+  },
+  "keywords": [
+    "Vue",
+    "email",
+    "marketing",
+    "osmose"
+  ]
 }
