@@ -28,15 +28,15 @@
             <tbody>
               <tr v-for="sub in gridData" :key="sub.index">
                 <td width="10%">
-                  <input type="checkbox" v-model="sub.to" class="filled-in" :id="'to'+sub.index"/>
+                  <input type="checkbox" v-model="sub.to" class="filled-in" :id="'to'+sub.index" :disabled="!sub.confirmed"/>
                   <label :for="'to'+sub.index"></label>
                 </td>
                 <td width="10%">
-                  <input type="checkbox" v-model="sub.cc" class="filled-in" :id="'cc'+sub.index"/>
+                  <input type="checkbox" v-model="sub.cc" class="filled-in" :id="'cc'+sub.index" :disabled="!sub.confirmed"/>
                   <label :for="'cc'+sub.index"></label>
                 </td>
                 <td width="10%">
-                  <input type="checkbox" v-model="sub.bcc" class="filled-in" :id="'bcc'+sub.index"/>
+                  <input type="checkbox" v-model="sub.bcc" class="filled-in" :id="'bcc'+sub.index" :disabled="!sub.confirmed"/>
                   <label :for="'bcc'+sub.index"></label>
                 </td>
                 <td width="20%">{{sub.fname}}</td>
@@ -58,7 +58,7 @@
       doToggleToAll () {
         if (!this.toToggled) {
           this.gridData.forEach(sub => {
-            sub.to = true;
+            if (sub.confirmed) { sub.to = true; }
           });
           this.toToggled = true;
         } else {
@@ -71,7 +71,7 @@
       doToggleCCAll () {
         if (!this.ccToggled) {
           this.gridData.forEach(sub => {
-            sub.cc = true;
+            if (sub.confirmed) { sub.cc = true; }
           });
           this.ccToggled = true;
         } else {
@@ -84,7 +84,7 @@
       doToggleBCCAll () {
         if (!this.bccToggled) {
           this.gridData.forEach(sub => {
-            sub.bcc = true;
+            if (sub.confirmed) { sub.bcc = true; }
           });
           this.bccToggled = true;
         } else {

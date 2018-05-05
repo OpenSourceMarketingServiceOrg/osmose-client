@@ -28,7 +28,6 @@
           </svg>
         </a>
       </li>
-      <li v-bind:class="{ active: $route.name === 'Docs-About' }"><a class="waves-effect waves-dark h-serif" href="/#/docs/about" >About</a></li>
       <li v-bind:class="{ active: $route.name === 'Docs-GettingStarted' }"><a class="waves-effect waves-dark h-serif" href="/#/docs/getting-started">Getting Started</a></li>
       <li v-bind:class="{ active: $route.name === 'Docs-Tools' }"><a class="waves-effect waves-dark h-serif" href="/#/docs/tools">Tools</a></li>
     </ul>
@@ -67,8 +66,8 @@ export default {
   .brand-logo {
     max-height: 100px;
     vertical-align: middle;
-        -webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.5));
-    drop-shadow: (2px 1px 2px rgba(0, 0, 0, 0.5));
+    --webkit-filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 1px 2px rgba(0, 0, 0, 0.5));
   }
 
   header, main, footer {
@@ -80,7 +79,4 @@ export default {
         padding-left: 0;
       }
     }
-
-    
-
 </style>

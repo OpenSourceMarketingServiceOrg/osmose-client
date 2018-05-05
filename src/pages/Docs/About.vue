@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h3 class="h-serif">About OZMoSE</h3>
+    <h3 class="h-serif">About OSMoSE</h3>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   name: 'Docs-About',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to OSMoSE'
     };
   }
 };

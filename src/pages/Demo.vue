@@ -67,6 +67,8 @@
 
 <script>
   import Materialize from 'materialize-css/dist/js/materialize.min.js';
+  import config from '../../config/osmose';
+  
   export default {
     name: 'Demo',
     data () {
@@ -89,53 +91,45 @@
     },
     methods: {
       getIt () { 
-        this.$http.get('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', {})
+        this.$http.get(config.api.list.get, {})
           .then((res) => {
-            console.log(res);
             this.emailList = [];
             res.data.emailList.forEach((e) => {
               this.emailList.push({email: e.Email.S, fname: e.FirstName.S, lname: e.LastName.S, binary: e.EmailBinary.B, index: this.emailList.length});
             });
-            console.log(this.emailList);
           }).catch((err) => {
-            console.log(err);
+            console.error(err);
           });
       },
       addUser () {
-        console.log(this.user);
-        this.$http.post('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', this.user)
+        this.$http.post(config.api.list.post, this.user)
           .then((res) => {
-            console.log(res);
             let successMsg = `<div class="toaster"><i class="material-icons" style="margin-right:8px;">check</i><span>Sign Up Success!</span></div>`;
             Materialize.toast(successMsg, 10000, 'green');
             this.reset();
           }).catch((err) => {
-            console.log(err);
+            console.error(err);
             let errorMsg = `<div class="toaster"><i class="material-icons" style="margin-right:8px;">error</i><span>Error Signing Up</span></div>`;
             Materialize.toast(errorMsg, 10000, 'red');
             this.reset();
           });
       },
       deleteSub (emailToDelete) {
-        console.log('email to be deleted4: ', emailToDelete);
         let deleteParams = {
           params: {
             emailToDelete: emailToDelete
           }
         };
-        console.log('deleteParams: ', deleteParams);
-        this.$http.delete('https://fqyy1uh5ui.execute-api.us-east-1.amazonaws.com/dev0/list', deleteParams)
+        this.$http.delete(config.api.list.delete, deleteParams)
           .then((res) => {
-            console.log(res);
             this.getIt();
           }).catch((err) => {
-            console.log(err);
+            console.error(err);
           });
       },
       isEmail (email) {
         // eslint-disable-next-line
         let ePattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        console.log(ePattern.test(email));
         return ePattern.test(email);
       },
       reset () {

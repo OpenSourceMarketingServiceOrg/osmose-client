@@ -15,11 +15,6 @@ export default new Router({
       component: () => import('@/pages/Demo')
     },
     {
-      path: '/docs/about',
-      name: 'Docs-About',
-      component: () => import('@/pages/Docs/About')
-    },
-    {
       path: '/docs/getting-started',
       name: 'Docs-GettingStarted',
       component: () => import('@/pages/Docs/GettingStarted')

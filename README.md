@@ -1,30 +1,17 @@
-# osmose-cli
+# Welcome to Osmose!
+## An Email Notification and Marketing Tool that runs in AWS's Permanent Free Tier
 
-> A Vue.js project
+You read that right, this application runs for free (well, almost) in AWS's permanent free tier. An email tool that you can run in your existing AWS systems that compares to MailChimp, Exact Target, and Adobe Campaigns.
 
-## Build Setup
+This project is the SPA portion of the application. It was built using Vue-cli.
 
-``` bash
-# install dependencies
-npm install
+The other projects:
+* [osmose-serverless](https://github.com/OpenSourceMarketingServiceOrg/osmose-serverless) - Lambda Functions with Serverless Framework
+* [osmose-self-signup](https://github.com/OpenSourceMarketingServiceOrg/osmose-self-signup) - Vuejs components that allow the recipients to signup for emails, and edit their account.
+* [osmose-email-engine](https://github.com/OpenSourceMarketingServiceOrg/osmose-email-engine) - A Javascript component that handles sending the S.E.S.
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Setup Steps
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+1. Run `npm install`
+2. Place your api routes in `config/osmose.js`
+3. `npm start`

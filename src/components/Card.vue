@@ -70,7 +70,4 @@
 </script>
 
 <style lang="scss" scoped>
-
-.card-footer {
-}
 </style>
